@@ -1,0 +1,102 @@
+@use '../abstracts' as a;
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	min-width: 375px;
+	font-family: 'YakuHanJP_Noto', 'Noto Sans JP', sans-serif;
+	font-size: 62.5%;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	line-break: normal;
+
+	@include a.mq(md) {
+		min-width: 1280px;
+	}
+}
+
+body {
+	font-size: 1.6rem;
+}
+
+li {
+	list-style-type: none;
+}
+
+th {
+	font-weight: inherit;
+}
+
+address {
+	font-style: inherit;
+}
+
+fieldset {
+	min-width: 0;
+	padding: 0;
+	border: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+h1 {
+	margin: 0;
+}
+
+cite,
+dfn,
+em,
+i,
+var {
+	font-style: inherit;
+}
+
+small {
+	font-size: inherit;
+}
+
+a {
+	color: currentColor;
+	text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+	padding: 0;
+	border: 0;
+
+	&:disabled {
+		cursor: not-allowed;
+	}
+}
+
+button {
+	touch-action: manipulation;
+
+	&:not(:disabled):not([aria-disabled='true']) {
+		cursor: pointer;
+	}
+}
+
+[hidden][hidden] {
+	// stylelint-disable-next-line declaration-no-important
+	display: none !important;
+}
+
+[data-whatinput='mouse'] *:focus,
+[data-whatinput='touch'] *:focus {
+	outline: none;
+}

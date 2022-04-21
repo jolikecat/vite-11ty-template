@@ -1,0 +1,32 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "npm run clean && concurrently npm:dev:*",
+    "dev:eleventy": "eleventy --serve",
+    "dev:vite": "vite build --watch",
+    "build": "npm run clean && concurrently npm:build:*",
+    "build:eleventy": "eleventy",
+    "build:vite": "vite build",
+    "clean": "rimraf dist"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.1",
+    "autoprefixer": "^10.4.4",
+    "concurrently": "^7.1.0",
+    "convict": "^6.2.2",
+    "html-minifier": "^4.0.0",
+    "htmlhint": "^1.1.4",
+    "postcss": "^8.4.12",
+    "prettier": "^2.6.2",
+    "rimraf": "^3.0.2",
+    "sass": "^1.50.1",
+    "vite": "^2.9.5"
+  },
+  "dependencies": {
+    "sanitize.css": "^13.0.0",
+    "what-input": "^5.2.10"
+  },
+  "volta": {
+    "node": "16.14.2"
+  }
+}
