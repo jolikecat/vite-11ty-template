@@ -11,6 +11,8 @@ module.exports = (eleventyConfig) => {
 		files: "dist/assets/"
 	});
 
+	eleventyConfig.addPassthroughCopy('./assets/images');
+
 	eleventyConfig.addLinter('lint-html', lintHtml);
 
 	eleventyConfig.addTransform('format-html', formatHtml);
