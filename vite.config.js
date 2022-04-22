@@ -20,7 +20,7 @@ export default defineConfig({
             output: {
                 entryFileNames: `assets/[name].js`,
                 assetFileNames: `assets/[name].[ext]`,
-                chunkFileNames: `assets/scripts/vendor.js`,
+                chunkFileNames: `assets/scripts/vendors.js`,
             }
         },
         emptyOutDir: false,
