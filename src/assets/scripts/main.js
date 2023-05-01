@@ -1,3 +1,6 @@
+/**
+ * 画面幅 < minWidth の時にviewportを固定
+ */
 const minWidth = 375;
 const el = document.querySelector('meta[name="viewport"]');
 const updateContent = () => {
