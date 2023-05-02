@@ -1,14 +1,15 @@
-# vite-sample
+# vite-11ty-template
+
 
 ## Usage
 
 ```shell
-# install dependencies
-$ npm ci
+# Installs dependencies
+$ npm install
 
-# serve with live/hot reload at localhost:8080
+# Starts local dev server at localhost:3000
 $ npm run dev
 
-# build for production
+# Build for production
 $ npm run build
 ```
