@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-	<head prefix="og: http://ogp.me/ns#">
+	<head prefix="og: https://ogp.me/ns#">
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width">
 
@@ -17,13 +17,13 @@
 		<meta name="twitter:card" content="summary_large_image">
 		<meta name="generator" content="{{ eleventy.generator }}">
 
-		{% include 'gtm-head.njk' %}
+		{% include 'pages/common/gtm-head.njk' %}
 
 		{% block styles %}
-		<link href="https://fonts.googleapis.com" rel="preconnect">
-		<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-		<link href="/assets/styles/main.scss" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap">
+		<link rel="stylesheet" href="/assets/styles/main.scss">
 		{% endblock %}
 
 		{% block scripts %}
@@ -32,7 +32,7 @@
 	</head>
 
 	<body>
-		{% include 'gtm-body.njk' %}
+		{% include 'pages/common/gtm-body.njk' %}
 
 		<div class="c-page">
 			{% include 'components/header.njk' %}
