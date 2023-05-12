@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { defineConfig } from "vite";
 import { eleventyPlugin } from "./plugins/vite-plugin-eleventy";
+import checkerPlugin from 'vite-plugin-checker';
 
 function getScssFiles(dir) {
     const scssFiles = [];
@@ -35,14 +36,17 @@ export default defineConfig({
     root: 'src',
     base: '/',
     publicDir: '../public',
-    plugins: [eleventyPlugin({
-        baseDir: '/'
-    })],
-    css: {
-        postcss: {
-            plugins: [require("autoprefixer")],
-        },
-    },
+    plugins: [
+        checkerPlugin({
+            stylelint: {
+                lintCommand: 'stylelint **/*.{css,scss,sass,less,styl,vue,svelte}',
+            },
+        }),
+        eleventyPlugin({
+            baseDir: '/'
+        }),
+    ],
+
     appType: 'mpa',
 
     server: {
