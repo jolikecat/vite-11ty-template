@@ -1,6 +1,5 @@
 # vite-11ty-template
 
-
 ## Usage
 
 ```shell
