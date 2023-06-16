@@ -1,5 +1,16 @@
 {
-    "extends": [
-        "stylelint-config-sass-guidelines"
-    ]
+	"extends": ["stylelint-config-sass-guidelines"],
+	"plugins": ["stylelint-order"],
+	"rules": {
+		"max-nesting-depth": null,
+		"selector-class-pattern": null,
+		"order/order": ["custom-properties", "declarations"],
+		"rule-empty-line-before": [
+			"always",
+			{
+				"except": ["first-nested"],
+				"ignore": ["after-comment"]
+			}
+		]
+	}
 }
