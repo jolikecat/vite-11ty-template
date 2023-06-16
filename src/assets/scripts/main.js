@@ -1,3 +1,5 @@
+import '../styles/main.scss'
+
 /**
  * 画面幅 < minWidth の時にviewportを固定
  */

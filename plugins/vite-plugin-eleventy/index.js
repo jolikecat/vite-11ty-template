@@ -30,7 +30,7 @@ const eleventyPlugin = (opts = {}) => {
   // Set up user options
   const options = Object.assign(
     {
-      replace: [['/index.html', '']],
+      replace: [['.html', '']],
     },
     opts,
   );

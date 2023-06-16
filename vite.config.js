@@ -1,36 +1,7 @@
-import fs from 'fs';
 import path from 'path';
 import { defineConfig } from "vite";
 import { eleventyPlugin } from "./plugins/vite-plugin-eleventy";
 import checkerPlugin from 'vite-plugin-checker';
-
-function getScssFiles(dir) {
-    const scssFiles = [];
-    const files = fs.readdirSync(dir);
-
-    for (let i = 0; i < files.length; i++) {
-        const file = files[i];
-        const filePath = path.join(dir, file);
-
-        if (fs.statSync(filePath).isDirectory()) {
-            scssFiles.push(...getScssFiles(filePath));
-        } else if (/^[^_].*\.scss$/.test(file)) {
-            scssFiles.push(filePath);
-        }
-    }
-
-    return scssFiles;
-}
-
-const scssFileList = getScssFiles(path.resolve(__dirname, './src/'));
-
-const manualChunksFiles = {};
-for (let i = 0; i < scssFileList.length; i++) {
-    const file = scssFileList[i];
-    const relativePath = path.relative(path.resolve(__dirname, './src/'), file);
-    const key = path.dirname(relativePath);
-    manualChunksFiles[key] = [path.resolve(__dirname, './src/' + relativePath)];
-}
 
 export default defineConfig({
     root: 'src',
@@ -58,7 +29,6 @@ export default defineConfig({
         assetsInlineLimit: 0,
         rollupOptions: {
             output: {
-                manualChunks: manualChunksFiles,
                 assetFileNames: assetInfo => {
                     let extType = path.extname(assetInfo.name);
 
@@ -70,10 +40,10 @@ export default defineConfig({
                         extType = 'images';
                     }
 
-                    return `assets/${extType}/[name]-[hash][extname]`;
+                    return `assets/${extType}/[name].[hash][extname]`;
                 },
-                chunkFileNames: 'assets/scripts/main-[hash].js',
-                entryFileNames: 'assets/scripts/index-[hash].js',
+                chunkFileNames: 'assets/scripts/main.[hash].js',
+                entryFileNames: 'assets/scripts/index.[hash].js',
             },
         },
         emptyOutDir: false,
