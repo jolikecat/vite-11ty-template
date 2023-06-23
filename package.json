@@ -1,11 +1,13 @@
 {
 	"private": true,
 	"scripts": {
-		"build": "npm run clean && npm run build:vite",
+		"build": "npm run clean && npm run build:vite && prettier 'dist/**/*.html' --write --ignore-path null",
 		"build:vite": "vite build",
 		"clean": "rimraf dist",
 		"dev": "vite",
 		"format": "prettier . --write",
+		"lint": "npm run lint:style",
+		"lint:style": "stylelint **/*.{css,scss,sass,less,styl,vue,svelte}",
 		"serve": "vite preview"
 	},
 	"dependencies": {
