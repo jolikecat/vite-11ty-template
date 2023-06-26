@@ -40,10 +40,10 @@ export default defineConfig({
 						extType = 'images';
 					}
 
-					return `assets/${extType}/[name].[hash][extname]`;
+					return `assets/${extType}/[name][extname]`;
 				},
-				chunkFileNames: 'assets/scripts/main.[hash].js',
-				entryFileNames: 'assets/scripts/index.[hash].js',
+				chunkFileNames: 'assets/scripts/[name].js',
+				entryFileNames: 'assets/scripts/[name].js',
 			},
 		},
 		emptyOutDir: false,
