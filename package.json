@@ -31,6 +31,6 @@
 	},
 	"browserslist": "defaults, not ie 11, not Firefox ESR",
 	"volta": {
-		"node": "18.16.0"
+		"node": "18.16.1"
 	}
 }
