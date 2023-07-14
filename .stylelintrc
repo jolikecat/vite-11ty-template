@@ -4,6 +4,7 @@
 	"rules": {
 		"max-nesting-depth": null,
 		"selector-class-pattern": null,
+		"selector-no-qualifying-type": null,
 		"order/order": ["custom-properties", "declarations"],
 		"rule-empty-line-before": [
 			"always",
