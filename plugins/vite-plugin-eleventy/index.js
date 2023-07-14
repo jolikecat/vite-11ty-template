@@ -138,7 +138,7 @@ const eleventyPlugin = (opts = {}) => {
         // Need to grab the pathname, not the request url, to match against 11ty output
         const { pathname } = req._parsedUrl;
         const pathWithoutBaseDir = options.baseDir ? pathname.replace(options.baseDir, '/') : pathname;
-        const url = pathWithoutBaseDir.endsWith('/') ? pathWithoutBaseDir : `${pathname}/`;
+        const url = pathWithoutBaseDir.endsWith('/') ? pathWithoutBaseDir : pathWithoutBaseDir.endsWith('.html') ? `${pathname}` : `${pathname}/`;
 
         // Find the file if it exists!
         const output = files.find((r) => r.url === url);
