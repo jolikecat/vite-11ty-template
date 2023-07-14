@@ -8,13 +8,13 @@
 		"format": "prettier . --write",
 		"lint": "npm run lint:style",
 		"lint:style": "stylelint **/*.{css,scss,sass,less,styl,vue,svelte}",
-		"serve": "vite preview"
+		"serve": "vite preview --host"
 	},
 	"dependencies": {
 		"sanitize.css": "^13.0.0"
 	},
 	"devDependencies": {
-		"@11ty/eleventy": "^1.0.2",
+		"@11ty/eleventy": "^2.0.1",
 		"autoprefixer": "^10.4.14",
 		"chalk": "^4.1.2",
 		"postcss": "^8.4.26",

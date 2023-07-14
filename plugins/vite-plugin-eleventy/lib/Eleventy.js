@@ -146,7 +146,7 @@ class EleventyJSONWatch extends Eleventy {
 
     await this.restart();
 
-    this.watchTargets.clearDependencyRequireCache();
+    this.watchTargets.clearRequireCacheFor(queue);
 
     const incrementalFile = this.watchManager.getIncrementalFile();
     if (incrementalFile) {
