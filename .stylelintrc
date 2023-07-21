@@ -3,6 +3,7 @@
 	"plugins": ["stylelint-order"],
 	"rules": {
 		"max-nesting-depth": null,
+		"property-no-unknown": null,
 		"selector-class-pattern": null,
 		"selector-no-qualifying-type": null,
 		"order/order": ["custom-properties", "declarations"],
