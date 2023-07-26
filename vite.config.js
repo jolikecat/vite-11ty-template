@@ -25,8 +25,8 @@ export default defineConfig({
 	},
 
 	build: {
-		outDir: '../dist/',
 		assetsInlineLimit: 0,
+		outDir: '../dist/',
 		rollupOptions: {
 			output: {
 				assetFileNames: (assetInfo) => {
@@ -47,6 +47,9 @@ export default defineConfig({
 			},
 		},
 		emptyOutDir: false,
+		modulePreload: {
+			polyfill: false
+		},
 		minify: true,
 	},
 });
