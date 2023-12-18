@@ -1,6 +1,6 @@
-const Eleventy = require('@11ty/eleventy');
-const EleventyBaseError = require('@11ty/eleventy/src/EleventyBaseError');
-const chalk = require('chalk');
+import Eleventy from '@11ty/eleventy';
+import EleventyBaseError from '@11ty/eleventy/src/EleventyBaseError';
+import chalk from 'chalk';
 
 /**
  * Extension of Eleventy to allow for JSON watching

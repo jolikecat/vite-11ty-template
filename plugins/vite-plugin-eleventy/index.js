@@ -1,7 +1,7 @@
-const EleventyJSONWatch = require('./lib/Eleventy');
-const { extname } = require('path');
-const path = require('path');
-const os = require('os');
+import EleventyJSONWatch from './lib/Eleventy';
+import { extname } from 'path';
+import path from 'path';
+import os from 'os';
 
 /**
  * Normalizes a path to remove any `.` and `..` segments to their POSIX equivalents.
@@ -70,7 +70,11 @@ const eleventyPlugin = (opts = {}) => {
           for (const r of options.replace) {
             name = name.replace(r[0], r[1]);
           }
-          name = name.startsWith('/') ? name.substring(1) : name;
+
+          if(name.startsWith('/')) {
+            name = name.substring(1)
+            name = name.replace('/', '_')
+          }
 
           cur.outId = path.join(process.cwd(), cur.outputPath);
 
