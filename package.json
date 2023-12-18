@@ -18,19 +18,19 @@
 		"autoprefixer": "^10.4.16",
 		"chalk": "^4.1.2",
 		"postcss": "^8.4.31",
-		"prettier": "^2.8.8",
-		"prettier-plugin-css-order": "^1.3.1",
+		"prettier": "^3.1.1",
+		"prettier-plugin-css-order": "^2.0.1",
 		"prettier-plugin-package": "^1.3.1",
 		"rimraf": "^5.0.5",
-		"sass": "^1.69.4",
+		"sass": "^1.69.5",
 		"stylelint": "^15.11.0",
 		"stylelint-config-sass-guidelines": "^10.0.0",
-		"stylelint-order": "^6.0.3",
-		"vite": "^4.4.11",
+		"stylelint-order": "^6.0.4",
+		"vite": "^5.0.10",
 		"vite-plugin-checker": "^0.6.2"
 	},
 	"browserslist": "defaults, not ie 11, not Firefox ESR",
 	"volta": {
-		"node": "18.16.1"
+		"node": "20.10.0"
 	}
 }
